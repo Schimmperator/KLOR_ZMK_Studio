@@ -37,21 +37,21 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DBTAP_DOT";
             #binding-cells = <0>;
-            bindings = <&kp PERIOD>, <&kp COLON>;
+            bindings = <&kp PERIOD>, <&kp GREATER_THAN>;
         };
 
         DBTap_comma: DBTap_comma {
             compatible = "zmk,behavior-tap-dance";
             label = "DBTAP_COMMA";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp SEMICOLON>;
+            bindings = <&kp COMMA>, <&kp LESS_THAN>;
         };
 
         DBTap_underscore: DBTap_underscore {
             compatible = "zmk,behavior-tap-dance";
             label = "DBTAP_UNDERSCORE";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp UNDERSCORE>;
+            bindings = <&kp SLASH>, <&kp QUESTION>;
         };
 
         DBTap_at_hash: DBTap_at_hash {
@@ -89,14 +89,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DBTAP_EXCL";
             #binding-cells = <0>;
-            bindings = <&kp QMARK>, <&kp EXCL>;
+            bindings = <&kp UNDERSCORE>, <&kp EXCL>;
         };
 
         DBTap_Z: DBTap_Z {
             compatible = "zmk,behavior-tap-dance";
             label = "DBTAP_Z";
             #binding-cells = <0>;
-            bindings = <&kp Z>;
+            bindings = <&kp Y>, <&kp MINUS>;
         };
 
         layertap: layertap {
@@ -164,8 +164,8 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-                      &kp B               &kp Y  &kp O        &kp U        &DBTap_at_hash                                         &DBTap_quote    &kp L           &kp D            &kp W  &kp V
-&lonyPress ESC LG(L)  &lonyPress C RC(C)  &kp I  &kp E        &kp A        &DBTap_comma                                           &DBTap_dot      &kp H           &kp T            &kp S  &kp N  &DBTap_Z
+                      &kp B               &kp Z  &kp O        &kp U        &DBTap_at_hash                                         &DBTap_quote    &kp L           &kp D            &kp W  &kp V
+&lonyPress LG(L) ESC  &lonyPress LC(C) C  &kp I  &kp E        &kp A        &DBTap_comma                                           &DBTap_dot      &kp H           &kp T            &kp S  &kp N  &DBTap_Z
 &kp LCTRL             &kp G               &kp X  &kp J        &kp K        &DBTap_underscore  &trans           &trans             &DBTap_excl     &kp R           &kp M            &kp F  &kp P  &kp Q
                                                  &kp LA(TAB)  &kp LG(TAB)  &kp SPACE          &layertap DEL 1  &layertap ENTER 2  &kp LEFT_SHIFT  &kp LEFT_ARROW  &kp RIGHT_ARROW
             >;
@@ -220,10 +220,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-           &trans  &trans     &trans      &trans  &trans                  &trans  &trans  &kp RA(U)  &trans  &trans
-&kp RA(A)  &trans  &kp RA(S)  &trans      &trans  &trans                  &trans  &trans  &trans     &trans  &kp RA(O)  &trans
-&trans     &trans  &trans     &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans     &trans
-                              &mo ADJUST  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &kp SEMI    &trans            &trans                  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans      &kp SINGLE_QUOTE  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans      &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &mo ADJUST  &trans            &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
