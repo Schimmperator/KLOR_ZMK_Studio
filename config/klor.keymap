@@ -58,7 +58,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DBTAP_AT_HASH";
             #binding-cells = <0>;
-            bindings = <&kp RA(Q)>, <&kp NUBS>;
+            bindings = <&kp RA(Q)>, <&kp RA(NUMBER_3)>;
         };
 
         DBTap_brackets: DBTap_brackets {
@@ -72,7 +72,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DBTAP_QUOTE";
             #binding-cells = <0>;
-            bindings = <&kp LS(NUBS)>, <&kp LS(NUMBER_2)>;
+            bindings = <&kp APOS>, <&kp LS(NUMBER_2)>;
         };
 
         lonyPress: lonyPress {
@@ -130,6 +130,20 @@
             #binding-cells = <0>;
             bindings = <&kp RIGHT_ARROW>, <&kp DOWN_ARROW>;
         };
+
+        DBTap_and: DBTap_and {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DBTAP_AND";
+            #binding-cells = <0>;
+            bindings = <&kp LS(NUMBER_6)>, <&kp LS(N5)>;
+        };
+
+        DBTap_brackets: DBTap_brackets {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DBTAP_BRACKETS";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N8)>, <&kp LS(N9)>;
+        };
     };
 
     combos {
@@ -164,10 +178,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-                      &kp B               &kp Z               &kp O        &kp U               &DBTap_at_hash                                         &DBTap_quote    &kp L               &kp D               &kp W  &lonyPress LC(V) V
-&lonyPress LG(L) ESC  &lonyPress LC(C) C  &kp I               &kp E        &lonyPress LC(A) A  &DBTap_comma                                           &DBTap_dot      &kp H               &lonyPress LC(T) T  &kp S  &kp N               &DBTap_Z
-&kp LCTRL             &kp G               &lonyPress LC(X) X  &kp J        &kp K               &DBTap_underscore  &trans           &trans             &DBTap_excl     &lonyPress LC(R) R  &kp M               &kp F  &lonyPress LC(P) P  &kp Q
-                                                              &kp LA(TAB)  &kp LG(TAB)         &kp SPACE          &layertap 1 DEL  &layertap 2 ENTER  &kp LEFT_SHIFT  &kp LEFT_ARROW      &kp RIGHT_ARROW
+                      &kp B               &kp Z               &kp O        &kp U               &DBTap_at_hash                                         &DBTap_quote    &kp L               &kp D               &lonyPress LC(W) W  &lonyPress LC(V) V
+&lonyPress LG(L) ESC  &lonyPress LC(C) C  &kp I               &kp E        &lonyPress LC(A) A  &DBTap_comma                                           &DBTap_dot      &kp H               &lonyPress LC(T) T  &kp S               &kp N               &DBTap_Z
+&kp LCTRL             &kp G               &lonyPress LC(X) X  &kp J        &kp K               &DBTap_underscore  &trans           &trans             &DBTap_excl     &lonyPress LC(R) R  &kp M               &kp F               &lonyPress LC(P) P  &kp Q
+                                                              &kp LA(TAB)  &kp LG(TAB)         &kp SPACE          &lt 1 BACKSPACE  &layertap 2 ENTER  &kp LEFT_SHIFT  &kp LEFT_ARROW      &kp RIGHT_ARROW
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -192,10 +206,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-        &trans  &trans     &trans  &trans     &trans                  &trans           &kp KP_N7     &kp KP_N8       &kp KP_N9  &kp KP_PLUS
-&trans  &trans  &trans     &trans  &trans     &trans                  &trans           &kp KP_N4     &kp KP_N5       &kp KP_N6  &kp KP_MINUS     &trans
-&trans  &trans  &kp PG_UP  &trans  &kp PG_DN  &trans  &trans  &trans  &kp KP_NUMBER_0  &kp KP_N1     &kp KP_N2       &kp KP_N3  &kp KP_MULTIPLY  &trans
-                           &trans  &trans     &trans  &trans  &trans  &trans           &kp UP_ARROW  &kp DOWN_ARROW
+         &trans  &trans  &trans         &trans     &trans                  &trans           &kp KP_NUMBER_7  &kp KP_N8       &kp KP_N9  &kp KP_PLUS
+&kp TAB  &trans  &trans  &kp PAGE_DOWN  &kp PG_UP  &trans                  &trans           &kp KP_N4        &kp KP_N5       &kp KP_N6  &kp KP_MINUS     &kp SLASH
+&trans   &trans  &none   &trans         &none      &trans  &trans  &trans  &kp KP_NUMBER_0  &kp KP_N1        &kp KP_N2       &kp KP_N3  &kp KP_MULTIPLY  &kp KP_EQUAL
+                         &trans         &trans     &trans  &trans  &trans  &trans           &kp UP_ARROW     &kp DOWN_ARROW
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -220,10 +234,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-        &trans  &trans  &kp SEMI    &trans            &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans      &kp SINGLE_QUOTE  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans      &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &mo ADJUST  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &kp SEMI  &kp LEFT_BRACKET  &trans                  &DBTap_brackets  &kp SLASH  &DBTap_and  &trans  &trans
+&trans  &trans  &trans  &trans    &kp SINGLE_QUOTE  &trans                  &trans           &trans     &trans      &trans  &trans  &trans
+&trans  &trans  &trans  &trans    &trans            &trans  &trans  &trans  &trans           &trans     &trans      &trans  &trans  &trans
+                        &none     &trans            &trans  &trans  &trans  &trans           &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
