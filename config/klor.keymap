@@ -58,14 +58,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DBTAP_AT_HASH";
             #binding-cells = <0>;
-            bindings = <&kp RA(Q)>, <&kp RA(NUMBER_3)>;
+            bindings = <&kp RA(Q)>, <&kp RA(PIPE)>;
         };
 
         DBTap_quote: DBTap_quote {
             compatible = "zmk,behavior-tap-dance";
             label = "DBTAP_QUOTE";
             #binding-cells = <0>;
-            bindings = <&kp APOS>, <&kp LS(NUMBER_2)>;
+            bindings = <&kp PIPE>, <&kp LS(NUMBER_2)>;
         };
 
         lonyPress: lonyPress {
@@ -199,10 +199,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-         &trans  &trans  &trans         &trans     &trans                  &trans           &kp KP_NUMBER_7  &kp KP_N8       &kp KP_N9  &kp KP_PLUS
-&kp TAB  &trans  &trans  &kp PAGE_DOWN  &kp PG_UP  &trans                  &trans           &kp KP_N4        &kp KP_N5       &kp KP_N6  &kp KP_MINUS     &kp SLASH
-&trans   &trans  &none   &trans         &none      &trans  &trans  &trans  &kp KP_NUMBER_0  &kp KP_N1        &kp KP_N2       &kp KP_N3  &kp KP_MULTIPLY  &kp KP_EQUAL
-                         &trans         &trans     &trans  &trans  &trans  &trans           &kp UP_ARROW     &kp DOWN_ARROW
+         &trans  &trans  &trans         &trans     &trans                  &trans  &kp N7        &kp N8          &kp N9  &kp KP_PLUS
+&kp TAB  &trans  &trans  &kp PAGE_DOWN  &kp PG_UP  &trans                  &trans  &kp N4        &kp N5          &kp N6  &kp KP_MINUS     &kp AMPERSAND
+&trans   &trans  &none   &trans         &none      &trans  &trans  &trans  &kp N0  &kp NUMBER_1  &kp NUMBER_2    &kp N3  &kp KP_MULTIPLY  &kp RIGHT_PARENTHESIS
+                         &trans         &trans     &trans  &trans  &trans  &trans  &kp UP_ARROW  &kp DOWN_ARROW
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
