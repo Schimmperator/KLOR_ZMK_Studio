@@ -234,9 +234,9 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-        &trans  &trans  &kp SEMI  &kp LEFT_BRACKET  &trans                  &DBTap_brackets  &kp SLASH  &DBTap_and  &trans  &trans
-&trans  &trans  &trans  &trans    &kp SINGLE_QUOTE  &trans                  &trans           &trans     &trans      &trans  &trans  &trans
-&trans  &trans  &trans  &trans    &trans            &trans  &trans  &trans  &trans           &trans     &trans      &trans  &trans  &trans
+        &trans  &trans  &kp SEMI  &kp LEFT_BRACKET  &trans                  &DBTap_brackets  &kp SLASH  &DBTap_and  &kp PIPE  &kp LG(LS(NUMBER_4))
+&trans  &trans  &trans  &trans    &kp SINGLE_QUOTE  &trans                  &trans           &trans     &trans      &trans    &trans                &kp DEL
+&trans  &trans  &trans  &trans    &trans            &trans  &trans  &trans  &trans           &trans     &trans      &trans    &trans                &trans
                         &none     &trans            &trans  &trans  &trans  &trans           &trans     &trans
             >;
 
