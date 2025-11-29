@@ -58,7 +58,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DBTAP_AT_HASH";
             #binding-cells = <0>;
-            bindings = <&kp AT>, <&kp HASH>;
+            bindings = <&kp RA(Q)>, <&kp NUBS>;
         };
 
         DBTap_brackets: DBTap_brackets {
@@ -72,7 +72,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DBTAP_QUOTE";
             #binding-cells = <0>;
-            bindings = <&kp SQT>, <&kp DQT>;
+            bindings = <&kp LS(NUBS)>, <&kp LS(NUMBER_2)>;
         };
 
         lonyPress: lonyPress {
@@ -81,7 +81,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <350>;
+            tapping-term-ms = <300>;
             flavor = "tap-preferred";
         };
 
@@ -102,7 +102,7 @@
         layertap: layertap {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYERTAP";
-            bindings = <&kp>, <&lt>;
+            bindings = <&lt>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <199>;
@@ -164,10 +164,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-                      &kp B               &kp Z  &kp O        &kp U        &DBTap_at_hash                                         &DBTap_quote    &kp L           &kp D            &kp W  &kp V
-&lonyPress LG(L) ESC  &lonyPress LC(C) C  &kp I  &kp E        &kp A        &DBTap_comma                                           &DBTap_dot      &kp H           &kp T            &kp S  &kp N  &DBTap_Z
-&kp LCTRL             &kp G               &kp X  &kp J        &kp K        &DBTap_underscore  &trans           &trans             &DBTap_excl     &kp R           &kp M            &kp F  &kp P  &kp Q
-                                                 &kp LA(TAB)  &kp LG(TAB)  &kp SPACE          &layertap DEL 1  &layertap ENTER 2  &kp LEFT_SHIFT  &kp LEFT_ARROW  &kp RIGHT_ARROW
+                      &kp B               &kp Z               &kp O        &kp U               &DBTap_at_hash                                         &DBTap_quote    &kp L               &kp D               &kp W  &lonyPress LC(V) V
+&lonyPress LG(L) ESC  &lonyPress LC(C) C  &kp I               &kp E        &lonyPress LC(A) A  &DBTap_comma                                           &DBTap_dot      &kp H               &lonyPress LC(T) T  &kp S  &kp N               &DBTap_Z
+&kp LCTRL             &kp G               &lonyPress LC(X) X  &kp J        &kp K               &DBTap_underscore  &trans           &trans             &DBTap_excl     &lonyPress LC(R) R  &kp M               &kp F  &lonyPress LC(P) P  &kp Q
+                                                              &kp LA(TAB)  &kp LG(TAB)         &kp SPACE          &layertap 1 DEL  &layertap 2 ENTER  &kp LEFT_SHIFT  &kp LEFT_ARROW      &kp RIGHT_ARROW
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
