@@ -61,13 +61,6 @@
             bindings = <&kp RA(Q)>, <&kp RA(NUMBER_3)>;
         };
 
-        DBTap_brackets: DBTap_brackets {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DBTAP_BRACKETS";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR>, <&kp RPAR>;
-        };
-
         DBTap_quote: DBTap_quote {
             compatible = "zmk,behavior-tap-dance";
             label = "DBTAP_QUOTE";
