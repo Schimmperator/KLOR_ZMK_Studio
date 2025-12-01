@@ -170,10 +170,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-                      &kp B               &kp Z               &kp O        &kp U               &DBTap_at_hash                                         &DBTap_quote    &kp L               &kp D               &lonyPress LC(W) W  &lonyPress LC(V) V
-&lonyPress LG(L) ESC  &lonyPress LC(C) C  &kp I               &kp E        &lonyPress LC(A) A  &DBTap_comma                                           &DBTap_dot      &kp H               &lonyPress LC(T) T  &kp S               &kp N               &DBTap_Z
-&kp LCTRL             &kp G               &lonyPress LC(X) X  &kp J        &kp K               &DBTap_underscore  &none            &none              &DBTap_excl     &lonyPress LC(R) R  &kp M               &kp F               &lonyPress LC(P) P  &kp Q
-                                                              &kp LA(TAB)  &kp LG(TAB)         &kp SPACE          &lt 1 BACKSPACE  &layertap 2 ENTER  &kp LEFT_SHIFT  &kp LEFT_ARROW      &kp RIGHT_ARROW
+                      &kp B               &kp Z               &kp O               &kp U               &DBTap_at_hash                                   &DBTap_quote    &kp L               &kp D               &lonyPress LC(W) W  &lonyPress LC(V) V
+&lonyPress LG(L) ESC  &lonyPress LC(C) C  &kp I               &lonyPress LG(E) E  &lonyPress LC(A) A  &DBTap_comma                                     &DBTap_dot      &kp H               &lonyPress LC(T) T  &kp S               &kp N               &DBTap_Z
+&kp LCTRL             &kp G               &lonyPress LC(X) X  &kp J               &kp K               &DBTap_underscore  &none            &none        &DBTap_excl     &lonyPress LC(R) R  &kp M               &kp F               &lonyPress LC(P) P  &kp Q
+                                                              &kp LA(TAB)         &kp LG(TAB)         &kp SPACE          &lt 1 BACKSPACE  &lt 2 ENTER  &kp LEFT_SHIFT  &kp LEFT_ARROW      &kp RIGHT_ARROW
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
