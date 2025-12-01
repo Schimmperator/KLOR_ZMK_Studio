@@ -170,10 +170,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-                      &kp B               &kp Z               &kp O               &kp U               &DBTap_at_hash                                   &DBTap_quote    &kp L               &kp D               &lonyPress LC(W) W  &lonyPress LC(V) V
-&lonyPress LG(L) ESC  &lonyPress LC(C) C  &kp I               &lonyPress LG(E) E  &lonyPress LC(A) A  &DBTap_comma                                     &DBTap_dot      &kp H               &lonyPress LC(T) T  &kp S               &kp N               &DBTap_Z
-&kp LCTRL             &kp G               &lonyPress LC(X) X  &kp J               &kp K               &DBTap_underscore  &none            &none        &DBTap_excl     &lonyPress LC(R) R  &kp M               &kp F               &lonyPress LC(P) P  &kp Q
-                                                              &kp LA(TAB)         &kp LG(TAB)         &kp SPACE          &lt 1 BACKSPACE  &lt 2 ENTER  &kp LEFT_SHIFT  &kp LEFT_ARROW      &kp RIGHT_ARROW
+                      &kp B               &kp Z               &kp O               &kp U               &DBTap_at_hash                                      &DBTap_quote  &kp L               &kp D               &lonyPress LC(W) W  &lonyPress LC(V) V
+&lonyPress LG(L) ESC  &lonyPress LC(C) C  &kp I               &lonyPress LG(E) E  &lonyPress LC(A) A  &DBTap_comma                                        &DBTap_dot    &kp H               &lonyPress LC(T) T  &kp S               &kp N               &DBTap_Z
+&kp LCTRL             &kp G               &lonyPress LC(X) X  &kp J               &kp K               &DBTap_underscore     &none            &none        &DBTap_excl   &lonyPress LC(R) R  &kp M               &kp F               &lonyPress LC(P) P  &kp Q
+                                                              &kp LA(TAB)         &kp LG(TAB)         &mt LEFT_SHIFT SPACE  &lt 1 BACKSPACE  &lt 2 ENTER  &kp RETURN    &kp LEFT_ARROW      &kp RIGHT_ARROW
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -198,10 +198,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-         &none  &none  &none          &none      &none                  &trans  &kp N7        &kp N8          &kp N9  &kp KP_PLUS
-&kp TAB  &none  &none  &kp PAGE_DOWN  &kp PG_UP  &trans                 &trans  &kp N4        &kp N5          &kp N6  &kp KP_MINUS     &kp AMPERSAND
-&none    &none  &none  &none          &none      &none   &none   &none  &kp N0  &kp NUMBER_1  &kp NUMBER_2    &kp N3  &kp KP_MULTIPLY  &kp RIGHT_PARENTHESIS
-                       &none          &none      &trans  &trans  &none  &none   &kp UP_ARROW  &kp DOWN_ARROW
+         &none  &none           &none           &kp PG_DN        &none                  &trans  &kp N7        &kp N8          &kp N9  &kp KP_PLUS
+&kp TAB  &none  &none           &kp UP_ARROW    &kp PAGE_DOWN    &trans                 &trans  &kp N4        &kp N5          &kp N6  &kp KP_MINUS     &kp AMPERSAND
+&none    &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none   &none   &none  &kp N0  &kp NUMBER_1  &kp NUMBER_2    &kp N3  &kp KP_MULTIPLY  &kp RIGHT_PARENTHESIS
+                                &none           &none            &trans  &trans  &none  &none   &kp UP_ARROW  &kp DOWN_ARROW
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
