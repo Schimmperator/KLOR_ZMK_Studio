@@ -57,7 +57,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DBTAP_AT_HASH";
             #binding-cells = <0>;
-            bindings = <&kp RA(Q)>, <&kp RA(PIPE)>;
+            bindings = <&kp RA(Q)>, <&kp KP_SLASH>;
         };
 
         DBTap_quote: DBTap_quote {
@@ -89,15 +89,6 @@
             label = "DBTAP_Z";
             #binding-cells = <0>;
             bindings = <&kp Y>, <&kp MINUS>;
-        };
-
-        layertap: layertap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYERTAP";
-            bindings = <&lt>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <199>;
         };
 
         modtap: modtap {
@@ -200,7 +191,7 @@
             bindings = <
          &none  &none           &none           &kp PG_DN        &none                  &trans  &kp N7        &kp N8          &kp N9  &kp KP_PLUS
 &kp TAB  &none  &none           &kp UP_ARROW    &kp PAGE_DOWN    &trans                 &trans  &kp N4        &kp N5          &kp N6  &kp KP_MINUS     &kp AMPERSAND
-&none    &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none   &none   &none  &kp N0  &kp NUMBER_1  &kp NUMBER_2    &kp N3  &kp KP_MULTIPLY  &kp RIGHT_PARENTHESIS
+&none    &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none   &none   &none  &kp N0  &kp N1        &kp N2          &kp N3  &kp KP_MULTIPLY  &kp RIGHT_PARENTHESIS
                                 &none           &none            &trans  &trans  &none  &none   &kp UP_ARROW  &kp DOWN_ARROW
             >;
 
