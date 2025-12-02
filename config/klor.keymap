@@ -22,16 +22,6 @@
 
 / {
     behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-
         DBTap_dot: DBTap_dot {
             compatible = "zmk,behavior-tap-dance";
             label = "DBTAP_DOT";
@@ -73,7 +63,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
 
@@ -89,15 +79,6 @@
             label = "DBTAP_Z";
             #binding-cells = <0>;
             bindings = <&kp Y>, <&kp MINUS>;
-        };
-
-        modtap: modtap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MODTAP";
-            bindings = <&kp>, <&mt>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
         };
 
         DBTap_up: DBTap_up {
