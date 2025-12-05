@@ -47,7 +47,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DBTAP_AT_HASH";
             #binding-cells = <0>;
-            bindings = <&kp RA(Q)>, <&kp KP_SLASH>;
+            bindings = <&kp RA(Q)>, <&kp NON_US_HASH>;
         };
 
         DBTap_quote: DBTap_quote {
@@ -108,6 +108,20 @@
             #binding-cells = <0>;
             bindings = <&kp LS(N8)>, <&kp LS(N9)>;
         };
+
+        DBTap_Slash: DBTap_Slash {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DBTAP_SLASH";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&kp RA(MINUS)>;
+        };
+
+        DBTap_smallerLARGER: DBTap_smallerLARGER {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DBTAP_SMALLERLARGER";
+            #binding-cells = <0>;
+            bindings = <&kp LS(NON_US_BSLH)>, <&kp NON_US_BSLH>;
+        };
     };
 
     combos {
@@ -151,10 +165,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-                      &kp B               &kp Z               &kp O               &kp U               &DBTap_at_hash                                      &DBTap_quote  &kp L               &kp D               &lonyPress LC(W) W  &lonyPress LC(V) V
-&lonyPress LG(L) ESC  &lonyPress LC(C) C  &kp I               &lonyPress LG(E) E  &lonyPress LC(A) A  &DBTap_comma                                        &DBTap_dot    &kp H               &lonyPress LC(T) T  &kp S               &kp N               &DBTap_Z
-&kp LCTRL             &kp G               &lonyPress LC(X) X  &kp J               &kp K               &DBTap_underscore     &none            &none        &DBTap_excl   &lonyPress LC(R) R  &kp M               &kp F               &lonyPress LC(P) P  &kp Q
-                                                              &kp LA(TAB)         &kp LG(TAB)         &mt LEFT_SHIFT SPACE  &lt 1 BACKSPACE  &lt 2 ENTER  &kp RETURN    &kp LEFT_ARROW      &kp RIGHT_ARROW
+                      &kp B  &kp Z  &kp O        &kp U        &DBTap_at_hash                                      &DBTap_quote  &kp L           &kp D            &kp W  &kp V
+&lonyPress LG(L) ESC  &kp C  &kp I  &kp E        &kp A        &DBTap_comma                                        &DBTap_dot    &kp H           &kp T            &kp S  &kp N  &DBTap_Z
+&kp LCTRL             &kp G  &kp X  &kp J        &kp K        &DBTap_underscore     &none            &none        &DBTap_excl   &kp R           &kp M            &kp F  &kp P  &kp Q
+                                    &kp LA(TAB)  &kp LG(TAB)  &mt LEFT_SHIFT SPACE  &lt 1 BACKSPACE  &lt 2 ENTER  &kp RETURN    &kp LEFT_ARROW  &kp RIGHT_ARROW
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -207,10 +221,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-        &none  &none  &none        &none   &none                    &DBTap_brackets  &kp SLASH       &DBTap_and      &kp GT           &kp LG(LS(S))
-&none   &none  &none  &none        &none   &none                    &trans           &none           &kp UP_ARROW    &none            &none          &kp DEL
-&trans  &none  &none  &none        &none   &none   &none    &none   &trans           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none          &none
-                      &kp K_POWER  &trans  &trans  &kp DEL  &trans  &trans           &trans          &trans
+        &none  &none  &none      &none   &none                    &DBTap_brackets  &DBTap_Slash    &DBTap_and      &DBTap_smallerLARGER  &kp LG(LS(S))
+&none   &none  &none  &none      &none   &none                    &trans           &none           &kp UP_ARROW    &none                 &none          &kp DEL
+&trans  &none  &none  &none      &none   &none   &none    &none   &trans           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW       &none          &none
+                      &kp K_PWR  &trans  &trans  &kp DEL  &trans  &trans           &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
