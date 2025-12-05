@@ -113,7 +113,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DBTAP_SLASH";
             #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&kp RA(MINUS)>;
+            bindings = <&kp KP_SLASH>, <&kp RA(MINUS)>;
         };
 
         DBTap_smallerLARGER: DBTap_smallerLARGER {
