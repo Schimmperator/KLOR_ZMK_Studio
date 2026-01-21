@@ -134,7 +134,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DBTAP_SWITCH_TABS";
             #binding-cells = <0>;
-            bindings = <&kp LC(TAB)>, <&kp LS(LC(TAB))>;
+            bindings = <&kp LC(TAB)>, <&kp LC(LS(TAB))>;
         };
     };
 
