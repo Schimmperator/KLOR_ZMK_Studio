@@ -210,7 +210,7 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-         &kp LS(LG(R))  &kp LG(T)          &kp LG(W)   &DBTap_switch_tabs  &DBTap_Home_End                   &trans  &kp N7  &kp N8  &kp N9  &kp KP_PLUS
+         &kp LG(Q)      &kp LG(T)          &kp LG(W)   &DBTap_switch_tabs  &DBTap_Home_End                   &trans  &kp N7  &kp N8  &kp N9  &kp KP_PLUS
 &kp TAB  &kp LG(SPACE)  &kp LA(LG(SPACE))  &kp LG(V)   &kp LG(C)           &trans                            &trans  &kp N4  &kp N5  &kp N6  &kp KP_MINUS     &kp AMPERSAND
 &trans   &kp LG(N1)     &kp LG(N2)         &kp LG(N3)  &kp LG(N4)          &trans           &none   &none    &kp N0  &kp N1  &kp N2  &kp N3  &kp KP_MULTIPLY  &kp RIGHT_PARENTHESIS
                                            &trans      &trans              &trans           &trans  &kp DEL  &trans  &trans  &trans
