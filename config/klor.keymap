@@ -160,6 +160,25 @@
         };
     };
 
+    macros {
+        app_switcher: app_switcher {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LEFT_GUI>;
+
+            label = "APP_SWITCHER";
+            wait-ms = <30>;
+            tap-ms = <30>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -182,10 +201,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-                          &kp B  &kp Z  &kp O        &kp U      &DBTap_at_hash                                          &DBTap_quote  &kp L           &kp D            &kp W  &kp V
-&lonyPress LG(LC(Q)) ESC  &kp C  &kp I  &kp E        &kp A      &DBTap_comma                                            &DBTap_dot    &kp H           &kp T            &kp S  &kp N  &DBTap_Z
-&kp LEFT_GUI              &kp G  &kp X  &kp J        &kp K      &DBTap_underscore     &none            &none            &DBTap_excl   &kp R           &kp M            &kp F  &kp P  &kp Q
-                                        &kp LG(TAB)  &kp LCTRL  &mt LEFT_SHIFT SPACE  &lt 1 BACKSPACE  &lt 2 BACKSPACE  &kp RETURN    &kp LEFT_ARROW  &kp RIGHT_ARROW
+                          &kp B  &kp Z  &kp O          &kp U         &DBTap_at_hash                                          &DBTap_quote  &kp L           &kp D            &kp W  &kp V
+&lonyPress LG(LC(Q)) ESC  &kp C  &kp I  &kp E          &kp A         &DBTap_comma                                            &DBTap_dot    &kp H           &kp T            &kp S  &kp N  &DBTap_Z
+&kp LCTRL                 &kp G  &kp X  &kp J          &kp K         &DBTap_underscore     &none            &none            &DBTap_excl   &kp R           &kp M            &kp F  &kp P  &kp Q
+                                        &app_switcher  &kp LEFT_GUI  &mt LEFT_SHIFT SPACE  &lt 1 BACKSPACE  &lt 2 BACKSPACE  &kp RETURN    &kp LEFT_ARROW  &kp RIGHT_ARROW
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -210,10 +229,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-         &kp LG(Q)                     &kp LG(T)                     &kp LG(W)                     &DBTap_switch_tabs            &DBTap_Home_End                   &trans  &kp N7  &kp N8  &kp N9  &kp KP_PLUS
-&kp TAB  &kp LG(SPACE)                 &kp LG(LC(LA(LS(NUMBER_0))))  &kp LG(V)                     &kp LG(C)                     &trans                            &trans  &kp N4  &kp N5  &kp N6  &kp KP_MINUS     &kp AMPERSAND
-&trans   &kp LG(LC(LA(LS(NUMBER_4))))  &kp LG(LC(LA(LS(NUMBER_1))))  &kp LG(LC(LA(LS(NUMBER_2))))  &kp LG(LC(LA(LS(NUMBER_3))))  &trans           &none   &none    &kp N0  &kp N1  &kp N2  &kp N3  &kp KP_MULTIPLY  &kp RIGHT_PARENTHESIS
-                                                                     &trans                        &trans                        &trans           &trans  &kp DEL  &trans  &trans  &trans
+         &kp LG(Q)                     &kp LG(T)                     &kp LG(W)                     &DBTap_switch_tabs            &DBTap_Home_End                                &trans  &kp N7  &kp N8  &kp N9  &kp KP_PLUS
+&kp TAB  &kp LG(SPACE)                 &kp LG(LC(LA(LS(NUMBER_0))))  &kp LG(V)                     &kp LG(C)                     &kp LG(H)                                      &trans  &kp N4  &kp N5  &kp N6  &kp KP_MINUS     &kp AMPERSAND
+&trans   &kp LG(LC(LA(LS(NUMBER_4))))  &kp LG(LC(LA(LS(NUMBER_1))))  &kp LG(LC(LA(LS(NUMBER_2))))  &kp LG(LC(LA(LS(NUMBER_3))))  &kp LG(LC(LA(LS(NUMBER_5))))  &none   &none    &kp N0  &kp N1  &kp N2  &kp N3  &kp KP_MULTIPLY  &kp RIGHT_PARENTHESIS
+                                                                     &trans                        &trans                        &trans                        &trans  &kp DEL  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
