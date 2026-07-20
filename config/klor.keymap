@@ -47,14 +47,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DBTAP_AT_HASH";
             #binding-cells = <0>;
-            bindings = <&kp RA(Q)>, <&kp NON_US_HASH>;
+            bindings = <&kp RA(L)>, <&kp NON_US_HASH>;
         };
 
         DBTap_quote: DBTap_quote {
             compatible = "zmk,behavior-tap-dance";
             label = "DBTAP_QUOTE";
             #binding-cells = <0>;
-            bindings = <&kp PIPE>, <&kp LS(NUMBER_2)>;
+            bindings = <&kp RA(NUMBER_7)>, <&kp LS(NUMBER_2)>;
         };
 
         lonyPress: lonyPress {
@@ -113,7 +113,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DBTAP_SLASH";
             #binding-cells = <0>;
-            bindings = <&kp AMPERSAND>, <&kp RA(MINUS)>;
+            bindings = <&kp AMPERSAND>, <&kp LS(RA(NUMBER_7))>;
         };
 
         DBTap_smallerLARGER: DBTap_smallerLARGER {
@@ -181,10 +181,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-                      &kp B  &kp Z  &kp O        &kp U        &DBTap_at_hash                                          &DBTap_quote  &kp L           &kp D            &kp W  &kp V
-&lonyPress LG(L) ESC  &kp C  &kp I  &kp E        &kp A        &DBTap_comma                                            &DBTap_dot    &kp H           &kp T            &kp S  &kp N  &DBTap_Z
-&kp LCTRL             &kp G  &kp X  &kp J        &kp K        &DBTap_underscore     &none            &none            &DBTap_excl   &kp R           &kp M            &kp F  &kp P  &kp Q
-                                    &kp LA(TAB)  &kp LG(TAB)  &mt LEFT_SHIFT SPACE  &lt 1 BACKSPACE  &lt 2 BACKSPACE  &kp RETURN    &kp LEFT_ARROW  &kp RIGHT_ARROW
+                          &kp B  &kp Z  &kp O        &kp U      &DBTap_at_hash                                          &DBTap_quote  &kp L           &kp D            &kp W  &kp V
+&lonyPress LG(LC(Q)) ESC  &kp C  &kp I  &kp E        &kp A      &DBTap_comma                                            &DBTap_dot    &kp H           &kp T            &kp S  &kp N  &DBTap_Z
+&kp LEFT_GUI              &kp G  &kp X  &kp J        &kp K      &DBTap_underscore     &none            &none            &DBTap_excl   &kp R           &kp M            &kp F  &kp P  &kp Q
+                                        &kp LG(TAB)  &kp LCTRL  &mt LEFT_SHIFT SPACE  &lt 1 BACKSPACE  &lt 2 BACKSPACE  &kp RETURN    &kp LEFT_ARROW  &kp RIGHT_ARROW
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -209,10 +209,10 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-         &kp LC(F5)  &kp LC(T)   &kp LC(W)   &DBTap_switch_tabs  &DBTap_Home_End                   &trans  &kp N7  &kp N8  &kp N9  &kp KP_PLUS
-&kp TAB  &kp LG(R)   &kp LG(E)   &kp LC(V)   &kp LC(C)           &trans                            &trans  &kp N4  &kp N5  &kp N6  &kp KP_MINUS     &kp AMPERSAND
-&trans   &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp LG(N4)          &trans           &none   &none    &kp N0  &kp N1  &kp N2  &kp N3  &kp KP_MULTIPLY  &kp RIGHT_PARENTHESIS
-                                 &trans      &trans              &trans           &trans  &kp DEL  &trans  &trans  &trans
+         &kp LS(LG(R))  &kp LG(T)          &kp LG(W)   &DBTap_switch_tabs  &DBTap_Home_End                   &trans  &kp N7  &kp N8  &kp N9  &kp KP_PLUS
+&kp TAB  &kp LG(SPACE)  &kp LA(LG(SPACE))  &kp LG(V)   &kp LG(C)           &trans                            &trans  &kp N4  &kp N5  &kp N6  &kp KP_MINUS     &kp AMPERSAND
+&trans   &kp LG(N1)     &kp LG(N2)         &kp LG(N3)  &kp LG(N4)          &trans           &none   &none    &kp N0  &kp N1  &kp N2  &kp N3  &kp KP_MULTIPLY  &kp RIGHT_PARENTHESIS
+                                           &trans      &trans              &trans           &trans  &kp DEL  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -237,9 +237,9 @@
                                  └─────────┴─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┴─────────┘ */
 
             bindings = <
-        &none  &none  &none        &none   &none                    &DBTap_brackets  &DBTap_Slash    &DBTap_and      &DBTap_smallerLARGER  &kp LG(LS(S))
-&none   &none  &none  &none        &none   &none                    &trans           &none           &kp UP_ARROW    &none                 &none          &kp DEL
-&trans  &none  &none  &none        &none   &none   &none    &none   &trans           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW       &none          &none
+        &none  &none  &none        &none   &none                    &DBTap_brackets  &DBTap_Slash    &DBTap_and      &DBTap_smallerLARGER  &kp LS(LG(NUMBER_5))
+&none   &none  &none  &none        &none   &none                    &trans           &none           &kp UP_ARROW    &none                 &none                 &kp DEL
+&trans  &none  &none  &none        &none   &none   &none    &none   &trans           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW       &none                 &none
                       &kp K_POWER  &trans  &trans  &kp DEL  &trans  &trans           &trans          &trans
             >;
 
