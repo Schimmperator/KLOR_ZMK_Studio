@@ -121,7 +121,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DBTAP_SMALLERLARGER";
             #binding-cells = <0>;
-            bindings = <&kp GT>, <&kp LT>;
+            bindings = <&kp LS(GRAVE)>, <&kp GRAVE>;
         };
 
         DBTap_Home_End: DBTap_Home_End {
