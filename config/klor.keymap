@@ -177,6 +177,13 @@
             wait-ms = <30>;
             tap-ms = <30>;
         };
+
+        unlockthismac1: unlockthismac1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp U &kp N &kp L &kp O &kp C &kp K &kp T &kp H &kp I &kp S &kp M &kp A &kp C &kp NUMBER_1>;
+            label = "UNLOCKTHISMAC1";
+        };
     };
 
     keymap {
@@ -232,7 +239,7 @@
          &kp LG(Q)                     &kp LG(T)                     &kp LG(W)                     &DBTap_switch_tabs            &DBTap_Home_End                                &trans  &kp N7  &kp N8  &kp N9  &kp KP_PLUS
 &kp TAB  &kp LG(SPACE)                 &kp LG(LC(LA(LS(NUMBER_0))))  &kp LG(V)                     &kp LG(C)                     &kp LG(H)                                      &trans  &kp N4  &kp N5  &kp N6  &kp KP_MINUS     &kp AMPERSAND
 &trans   &kp LG(LC(LA(LS(NUMBER_4))))  &kp LG(LC(LA(LS(NUMBER_1))))  &kp LG(LC(LA(LS(NUMBER_2))))  &kp LG(LC(LA(LS(NUMBER_3))))  &kp LG(LC(LA(LS(NUMBER_5))))  &none   &none    &kp N0  &kp N1  &kp N2  &kp N3  &kp KP_MULTIPLY  &kp RIGHT_PARENTHESIS
-                                                                     &trans                        &trans                        &trans                        &trans  &kp DEL  &trans  &trans  &trans
+                                                                     &trans                        &trans                        &unlockthismac1               &trans  &kp DEL  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
