@@ -183,6 +183,8 @@
             #binding-cells = <0>;
             bindings = <&kp U &kp N &kp L &kp O &kp C &kp K &kp T &kp H &kp I &kp S &kp M &kp A &kp C &kp NUMBER_1 &kp ENTER>;
             label = "UNLOCKTHISMAC1";
+            wait-ms = <10>;
+            tap-ms = <10>;
         };
     };
 
