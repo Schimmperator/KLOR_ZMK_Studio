@@ -181,7 +181,7 @@
         mkdir_new_project: unlockthismac1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp M &kp K &kp D &kp I &kp R>;
+            bindings = <&kp LS(N) &kp LS(S) &kp LS(T) &kp LS(H) &kp C &kp I &kp E &kp A &kp N &kp S &kp T &kp H &kp NUHS>;
             label = "UNLOCKTHISMAC1";
             wait-ms = <10>;
             tap-ms = <10>;
